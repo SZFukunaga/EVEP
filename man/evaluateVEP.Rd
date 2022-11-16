@@ -37,7 +37,6 @@ variant effect prediction (VEP).
 # training dataset.
 
 pearsonVEP <- evaluateVEP("/Users/shuzo/shuzo/UofT/BCB410/EVEP/data/sample_random_data.csv")
-getwd()
 pearsonVEP
 
 # Example 2:
