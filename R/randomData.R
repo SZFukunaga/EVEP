@@ -13,8 +13,8 @@ defaultRandomValue <- function(x, max, min, actual_value){
 
 generateRandomData <- function(smallest=100,
                                largest=1000,
-                               num_data=100,
-                               step=100,
+                               num_data=1000,
+                               step=50,
                                fnc_value = defaultRandomValue){
   df_random_data = data.frame(data_size = 0,
                               non_augmented_value = 0,
