@@ -27,14 +27,15 @@
 #' # Evaluate VEP with pearson correlation. sample_random_data.csv is used as a
 #' # training dataset.
 #'
-#' pearsonVEP <- evaluateVEP("./data/sample_random_data.csv")
+#' pearsonVEP <- evaluateVEP("/Users/shuzo/shuzo/UofT/BCB410/EVEP/data/sample_random_data.csv")
+#' getwd()
 #' pearsonVEP
 #'
 #' # Example 2:
 #' # Evaluate VEP with mean squared error.sample_random_data.csv is used as a
 #' # training dataset.
 #'
-#' mseVEP <- evaluateVEP("./data/sample_random_data.csv",
+#' mseVEP <- evaluateVEP("/Users/shuzo/shuzo/UofT/BCB410/EVEP/data/sample_random_data.csv",
 #'                       stats = "mse",
 #'                       label = "mean_squared_error",
 #'                       fnc_stats = NA)

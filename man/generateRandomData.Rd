@@ -31,6 +31,6 @@ A function to generate random sample training data.
 # Produce a sample random dataset and save as csv file.
 
 df_random_data <- generateRandomData()
-write.csv(df_random_data, "./data/sample_random_data.csv", row.names = FALSE)
+write.csv(df_random_data, "/Users/shuzo/shuzo/UofT/BCB410/EVEP/data/sample_random_data.csv", row.names = FALSE)
 
 }

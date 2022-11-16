@@ -25,13 +25,13 @@
 #' # Visualize the evaluation of VEP with pearson correlation.
 #' # sample_random_data.csv is used as a training dataset.
 #'
-#' visualizeEvaluation("./data/sample_random_data.csv")
+#' visualizeEvaluation("/Users/shuzo/shuzo/UofT/BCB410/EVEP/data/sample_random_data.csv")
 #'
 #' # Example 2:
 #' # Visualize the evaluation of VEP with mean squared error.
 #' # sample_random_data.csv is used as a training dataset.
 #'
-#' visualizeEvaluation("./data/sample_random_data.csv",
+#' visualizeEvaluation("/Users/shuzo/shuzo/UofT/BCB410/EVEP/data/sample_random_data.csv",
 #'                       stats = "mse",
 #'                       label = "mean_squared_error",
 #'                       fnc_stats = NA)
