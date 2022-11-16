@@ -24,10 +24,8 @@
 #' df_random_data <- generateRandomData()
 #' write.csv(df_random_data, "./data/sample_random_data.csv", row.names = FALSE)
 #'
-#' @references
-#'
 #' @export
-#' @import
+#' @import stats
 
 generateRandomData <- function(smallest=100,
                                largest=1000,

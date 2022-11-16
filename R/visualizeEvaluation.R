@@ -28,7 +28,7 @@
 #' visualizeEvaluation("./data/sample_random_data.csv")
 #'
 #' # Example 2:
-#' Visualize the evaluation of VEP with mean squared error.
+#' # Visualize the evaluation of VEP with mean squared error.
 #' # sample_random_data.csv is used as a training dataset.
 #'
 #' visualizeEvaluation("./data/sample_random_data.csv",
@@ -37,9 +37,12 @@
 #'                       fnc_stats = NA)
 #'
 #' @references
+#' Bonnet, D.G., Wright, T.A., (2000) Sample size requirements for estimating
+#' pearson, kendall and spearman correlations. *Psychometrika* 65, 23–28.
+#' <https://doi.org/10.1007/BF02294183>
 #'
 #' @export
-#' @import
+#' @import stats
 
 visualizeEvaluation <- function(infile,
                                 stats = "pearson",

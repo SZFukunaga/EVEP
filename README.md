@@ -81,6 +81,10 @@ R Core Team (2021). R: A language and environment for statistical
 computing. R Foundation for Statistical Computing, Vienna, Austria.
 <https://www.R-project.org/>
 
+Bonnet, D.G., Wright, T.A., (2000) Sample size requirements for estimating pearson, kendall and spearman correlations. *Psychometrika* 65, 23–28.
+<https://doi.org/10.1007/BF02294183>
+
+
 ## Acknowledgements
 
 This package was developed for 2022 BCB410H Assignment: Applied
