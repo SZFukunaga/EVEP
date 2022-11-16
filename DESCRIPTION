@@ -1,6 +1,6 @@
 Package: EVEP
 Type: Package
-Title: Evaluates Variant Effect Prediction.
+Title: Evaluates Variant Effect Prediction
 Version: 0.1.0
 Author: person("Shuzo", "Fukunaga", 
                   email = "shuzo.fukunaga@mail.utoronto.ca", 
@@ -13,6 +13,3 @@ Encoding: UTF-8
 LazyData: true
 Depends: R (>= 4.2.1)
 RoxygenNote: 7.2.2
-Imports: 
-    stats,
-    utils
