@@ -60,7 +60,13 @@ visualizeEvaluation <- function(infile,
   # Plot augmented VEP.
   points(df_evaluation$data_size, df_evaluation[, 3], col="red", pch = 19)
   # Add legend and title.
-  legend("bottomright",
+  if (stats == "mse"){
+    loc_legend <- "topright"
+  }
+  else{
+    loc_legend <- "bottomright"
+  }
+  legend(loc_legend,
          legend = c("Not Augmented", "Augmented"),
          col = c("black", "red"),
          pch = 19)

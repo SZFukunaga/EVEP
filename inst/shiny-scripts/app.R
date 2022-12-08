@@ -15,15 +15,22 @@ ui <- fluidPage(
       fileInput("infile", "Upload CSV File: ", accept = ".csv")
     ),
     mainPanel(
-      plotOutput(outputId = "plot")
+      plotOutput(outputId = "plot_pearson"),
+      plotOutput(outputId = "plot_mse")
     )
   )
 )
 
 server <- function(input, output) {
-  output$plot <- renderPlot({
+  output$plot_pearson <- renderPlot({
     infile <- input$infile
     EVEP::visualizeEvaluation(infile$datapath)
+  })
+  output$plot_mse <- renderPlot({
+    infile <- input$infile
+    EVEP::visualizeEvaluation(infile$datapath, stats = "mse",
+                              label = "mean_squared_error",
+                              fnc_stats = NA)
   })
 }
 
