@@ -1,12 +1,20 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-ould have their own dataset and use this tool to analyse, but sample
-dataset can be generated. This package contains the main components:
-DESCRIPTION, NAMESPACE, man subdirectory and R subdirectory.
-Additionally, licence, README and subdirectories vignettes, tests, data
-and inst are also added. `EVEP` is developed using R version 4.2.1 and
-Mac.
+# EVEP
+
+A Package to Evaluate Variant Effect Prediction.
+
+## Description
+
+The objective of `EVEP` is to evaluate the effectiveness of training
+data size or data augmentation for machine learning variant effect
+prediction. Users should have their own dataset and use this tool to
+analyse, but sample dataset can be generated. This package contains the
+main components: DESCRIPTION, NAMESPACE, man subdirectory and R
+subdirectory. Additionally, licence, README and subdirectories
+vignettes, tests, data and inst are also added. `EVEP` is developed
+using R version 4.2.1 and Mac.
 
 ## Installation
 
