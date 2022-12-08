@@ -1,19 +1,12 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# EVEP
-
-A Package to Evaluate Variant Effect Prediction.
-
-## Description
-
-The objective of `EVEP` is to evaluate the effectiveness of training
-data size or data augmentation for machine learning variant effect
-prediction. Users should have their own dataset and use this tool to analyse, 
-but sample dataset can be generated. This package contains the main components:
-DESCRIPTION, NAMESPACE, man subdirectory and R subdirectory. Additionally, 
-licence, README and subdirectories vignettes, tests, data and inst are also 
-added. `EVEP` is developed using R version 4.2.1 and Mac.
+ould have their own dataset and use this tool to analyse, but sample
+dataset can be generated. This package contains the main components:
+DESCRIPTION, NAMESPACE, man subdirectory and R subdirectory.
+Additionally, licence, README and subdirectories vignettes, tests, data
+and inst are also added. `EVEP` is developed using R version 4.2.1 and
+Mac.
 
 ## Installation
 
@@ -26,6 +19,7 @@ library("EVEP")
 ```
 
 To run the shinyApp
+
 ``` r
 runEVEP()
 ```
@@ -44,11 +38,11 @@ mean squared error. User-defined statistical measures can be added. The
 *visualizeEvaluation* generates a plot which represents the statistical
 measure from *evaluateVEP*. This function helps users to understand how
 training data size and data augmentation affects the accuracy of VEP
-along the statistical measure of choice.
-In addition, this package has 1 function, *generateRandomData*, to generate
-random sample dataset. It is expected that users prepare thier own dataset, but
-this function may be useful to test this package for example.
-Vignettes can be used for more detail.
+along the statistical measure of choice. In addition, this package has 1
+function, *generateRandomData*, to generate random sample dataset. It is
+expected that users prepare thier own dataset, but this function may be
+useful to test this package for example. Vignettes can be used for more
+detail.
 
 ``` r
 browseVignettes("EVEP")
@@ -74,9 +68,9 @@ R Core Team (2021). R: A language and environment for statistical
 computing. R Foundation for Statistical Computing, Vienna, Austria.
 <https://www.R-project.org/>
 
-Bonnet, D.G., Wright, T.A., (2000) Sample size requirements for estimating pearson, kendall and spearman correlations. *Psychometrika* 65, 23–28.
-<https://doi.org/10.1007/BF02294183>
-
+Bonnet, D.G., Wright, T.A., (2000) Sample size requirements for
+estimating pearson, kendall and spearman correlations. *Psychometrika*
+65, 23–28. <https://doi.org/10.1007/BF02294183>
 
 ## Acknowledgements
 
