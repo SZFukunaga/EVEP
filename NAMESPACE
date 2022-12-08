@@ -2,5 +2,7 @@
 
 export(evaluateVEP)
 export(generateRandomData)
+export(runEVEP)
 export(visualizeEvaluation)
 import(stats)
+importFrom(shiny,runApp)
