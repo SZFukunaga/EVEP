@@ -3,7 +3,10 @@
 #' A function to visualize the relationships between accuracy of VEP and
 #' training data size, or and data augmentation.
 #'
-#' @param infile A path to a training data to be evaluated.
+#' @param vep A dataframe with training data to be evaluated.The first column
+#' should be data sizes, the second and third are predicted values for
+#' non-augmented and augmented training data. The last one should be actual
+#' values the model is predicting.
 #'
 #' @param stats A statistical measure to calculate. This has to be either
 #' "pearson", "kenall" or "mse". "pearson" is set as a default.
@@ -25,13 +28,15 @@
 #' # Visualize the evaluation of VEP with pearson correlation.
 #' # sample_random_data.csv is used as a training dataset.
 #'
-#' visualizeEvaluation("/Users/shuzo/shuzo/UofT/BCB410/EVEP/data/sample_random_data.csv")
+#' df_random_data <- generateRandomData()
+#' visualizeEvaluation(df_random_data)
 #'
 #' # Example 2:
 #' # Visualize the evaluation of VEP with mean squared error.
 #' # sample_random_data.csv is used as a training dataset.
 #'
-#' visualizeEvaluation("/Users/shuzo/shuzo/UofT/BCB410/EVEP/data/sample_random_data.csv",
+#' df_random_data <- generateRandomData()
+#' visualizeEvaluation(df_random_data,
 #'                       stats = "mse",
 #'                       label = "mean_squared_error",
 #'                       fnc_stats = NA)
@@ -42,15 +47,15 @@
 #' <https://doi.org/10.1007/BF02294183>
 #'
 #' @export
-#' @import stats
+#' @import stats graphics utils
 
-visualizeEvaluation <- function(infile,
+visualizeEvaluation <- function(vep,
                                 stats = "pearson",
                                 label = "pearson correlation",
                                 fnc_stats = NA){
 
   # Obtain statistical measures with evaluateVEP().
-  df_evaluation <- evaluateVEP(infile, stats, label, fnc_stats)
+  df_evaluation <- evaluateVEP(vep, stats, label, fnc_stats)
   # Plot non-augmented VEP.
   plot(df_evaluation$data_size,
        df_evaluation[, 2],

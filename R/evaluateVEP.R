@@ -3,7 +3,10 @@
 #' A function to calculate a given statistical measure with a training data for
 #' variant effect prediction (VEP).
 #'
-#' @param infile A path to a training data to be evaluated.
+#' @param vep A dataframe with training data to be evaluated.The first column
+#' should be data sizes, the second and third are predicted values for
+#' non-augmented and augmented training data. The last one should be actual
+#' values the model is predicting.
 #'
 #' @param stats A statistical measure to calculate. This has to be either
 #' "pearson", "kenall" or "mse". "pearson" is set as a default.
@@ -27,14 +30,16 @@
 #' # Evaluate VEP with pearson correlation. sample_random_data.csv is used as a
 #' # training dataset.
 #'
-#' pearsonVEP <- evaluateVEP("/Users/shuzo/shuzo/UofT/BCB410/EVEP/data/sample_random_data.csv")
+#' df_random_data <- generateRandomData()
+#' pearsonVEP <- evaluateVEP(df_random_data)
 #' pearsonVEP
 #'
 #' # Example 2:
 #' # Evaluate VEP with mean squared error.sample_random_data.csv is used as a
 #' # training dataset.
 #'
-#' mseVEP <- evaluateVEP("/Users/shuzo/shuzo/UofT/BCB410/EVEP/data/sample_random_data.csv",
+#' df_random_data <- generateRandomData()
+#' mseVEP <- evaluateVEP(df_random_data,
 #'                       stats = "mse",
 #'                       label = "mean_squared_error",
 #'                       fnc_stats = NA)
@@ -47,9 +52,9 @@
 #'
 #'
 #' @export
-#' @import stats
+#' @import stats utils
 
-evaluateVEP <- function(infile,
+evaluateVEP <- function(vep,
                         stats = "pearson",
                         label = "pearson_corr",
                         fnc_stats = NA){
@@ -81,7 +86,7 @@ evaluateVEP <- function(infile,
   }
 
   # Read a given training data.
-  df_vep <- read.csv(infile)
+  df_vep <- vep
 
   df_evaluation <- data.frame(0, 0, 0)
   colnames(df_evaluation) <- c("data_size",

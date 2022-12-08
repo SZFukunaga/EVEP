@@ -85,13 +85,15 @@ data(package = "EVEP")
 * The **eveluateVEP** A function to calculate a given statistical measure with a training data for variant effect prediction (VEP).
 Example:
 ``` r
-pearsonVEP <- evaluateVEP("/Users/shuzo/shuzo/UofT/BCB410/EVEP/data/sample_random_data.csv")
+df_random_data <- generateRandomData()
+pearsonVEP <- evaluateVEP(df_random_data)
 pearsonVEP
 ```
 * The **visualizeEvaluation** A function to visualize the relationships between accuracy of VEP and training data size, or and data augmentation.
 Example:
 ```r
-visualizeEvaluation("/Users/shuzo/shuzo/UofT/BCB410/EVEP/data/sample_random_data.csv")
+df_random_data <- generateRandomData()
+visualizeEvaluation(df_random_data)
 ```
 <br>
 

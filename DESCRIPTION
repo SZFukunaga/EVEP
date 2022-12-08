@@ -18,4 +18,6 @@ Suggests:
     rmarkdown
 VignetteBuilder: knitr
 Imports: 
-    shiny
+    graphics,
+    shiny,
+    utils

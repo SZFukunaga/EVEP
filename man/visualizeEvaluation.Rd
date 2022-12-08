@@ -5,14 +5,17 @@
 \title{Visualize VEP Evaluation}
 \usage{
 visualizeEvaluation(
-  infile,
+  vep,
   stats = "pearson",
   label = "pearson correlation",
   fnc_stats = NA
 )
 }
 \arguments{
-\item{infile}{A path to a training data to be evaluated.}
+\item{vep}{A dataframe with training data to be evaluated.The first column
+should be data sizes, the second and third are predicted values for
+non-augmented and augmented training data. The last one should be actual
+values the model is predicting.}
 
 \item{stats}{A statistical measure to calculate. This has to be either
 "pearson", "kenall" or "mse". "pearson" is set as a default.}
@@ -39,13 +42,15 @@ training data size, or and data augmentation.
 # Visualize the evaluation of VEP with pearson correlation.
 # sample_random_data.csv is used as a training dataset.
 
-visualizeEvaluation("/Users/shuzo/shuzo/UofT/BCB410/EVEP/data/sample_random_data.csv")
+df_random_data <- generateRandomData()
+visualizeEvaluation(df_random_data)
 
 # Example 2:
 # Visualize the evaluation of VEP with mean squared error.
 # sample_random_data.csv is used as a training dataset.
 
-visualizeEvaluation("/Users/shuzo/shuzo/UofT/BCB410/EVEP/data/sample_random_data.csv",
+df_random_data <- generateRandomData()
+visualizeEvaluation(df_random_data,
                       stats = "mse",
                       label = "mean_squared_error",
                       fnc_stats = NA)

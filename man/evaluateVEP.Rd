@@ -4,10 +4,13 @@
 \alias{evaluateVEP}
 \title{Evaluates VEP with Statistical Measure}
 \usage{
-evaluateVEP(infile, stats = "pearson", label = "pearson_corr", fnc_stats = NA)
+evaluateVEP(vep, stats = "pearson", label = "pearson_corr", fnc_stats = NA)
 }
 \arguments{
-\item{infile}{A path to a training data to be evaluated.}
+\item{vep}{A dataframe with training data to be evaluated.The first column
+should be data sizes, the second and third are predicted values for
+non-augmented and augmented training data. The last one should be actual
+values the model is predicting.}
 
 \item{stats}{A statistical measure to calculate. This has to be either
 "pearson", "kenall" or "mse". "pearson" is set as a default.}
@@ -36,14 +39,16 @@ variant effect prediction (VEP).
 # Evaluate VEP with pearson correlation. sample_random_data.csv is used as a
 # training dataset.
 
-pearsonVEP <- evaluateVEP("/Users/shuzo/shuzo/UofT/BCB410/EVEP/data/sample_random_data.csv")
+df_random_data <- generateRandomData()
+pearsonVEP <- evaluateVEP(df_random_data)
 pearsonVEP
 
 # Example 2:
 # Evaluate VEP with mean squared error.sample_random_data.csv is used as a
 # training dataset.
 
-mseVEP <- evaluateVEP("/Users/shuzo/shuzo/UofT/BCB410/EVEP/data/sample_random_data.csv",
+df_random_data <- generateRandomData()
+mseVEP <- evaluateVEP(df_random_data,
                       stats = "mse",
                       label = "mean_squared_error",
                       fnc_stats = NA)
