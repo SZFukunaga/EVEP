@@ -6,8 +6,8 @@ Author: person("Shuzo", "Fukunaga",
                   email = "shuzo.fukunaga@mail.utoronto.ca", 
                   role = c("aut", "cre"))
 Maintainer: Shuzo Fukunaga <shuzo.fukunaga@mail.utoronto.ca>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Evaluates the effectiveness of training data size or data 
+  augmentation for machine learning variant effect prediction.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
