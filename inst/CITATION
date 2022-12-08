@@ -1,0 +1,12 @@
+citHeader("To cite EVEP in publications use:")
+
+citEntry(
+  entry    = "Unpublished",
+  title    = "EVEP: Evaluation of Variant Effect Prediction",
+  author   = "Shuzo Fukunaga",
+  note     = "Unpublished",
+  year     = "2022",
+
+  textVersion =
+  paste("Fukunaga, S. (2022) EVEP: Evaluation of Variant Effect Prediction. Unpublished. URL git@github.com:SZFukunaga/EVEP.")
+)
